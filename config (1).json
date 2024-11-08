@@ -1,0 +1,58 @@
+{
+    "target_urls": [
+        "https://example.com"
+    ],
+    "api_endpoints": [
+        "https://example.com/api/v1/users",
+        "https://example.com/api/v1/orders"
+    ],
+    "javascript_security": {
+        "scan_for_xss": true,
+        "scan_for_insecure_libraries": true,
+        "csp_evaluation": true,
+        "dom_based_xss_detection": true
+    },
+    "input_validation_checks": {
+        "sql_injection": true,
+        "xss": true,
+        "command_injection": true,
+        "deserialization_attack": true,
+        "fuzzing_for_injection_points": true
+    },
+    "api_security": {
+        "bola_check": true,
+        "rate_limiting": true,
+        "auth_validation": true,
+        "endpoint_enumeration": true,
+        "sensitive_data_check": true
+    },
+    "session_management": {
+        "secure_cookies": true,
+        "session_fixation_check": true,
+        "csrf_protection_check": true,
+        "session_hijacking_prevention": true
+    },
+    "authentication_authorization": {
+        "mfa_check": true,
+        "privilege_escalation_test": true,
+        "session_timeout_check": true
+    },
+    "compliance_mapping": {
+        "owasp_top_10": true,
+        "cwe_mapping": true
+    },
+    "alert_thresholds": {
+        "critical": 10,
+        "high": 7,
+        "medium": 5,
+        "low": 2
+    },
+    "continuous_monitoring": {
+        "schedule_recurring_scans": true,
+        "real_time_anomaly_detection": true,
+        "integration_with_alerts": [
+            "slack",
+            "email"
+        ]
+    }
+}
